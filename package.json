@@ -1,0 +1,16 @@
+{
+  "name": "automation_playwright",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "googleTest": "npx playwright test src/test/Playwright_Day1_06042024/GoogleSearch.spec.ts --headed --workers=1 --project=chrome --project=safari --reporter=html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.44.1",
+    "@types/node": "^20.14.0"
+  }
+}
