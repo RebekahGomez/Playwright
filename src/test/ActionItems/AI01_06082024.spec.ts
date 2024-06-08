@@ -1,9 +1,12 @@
-import { test, expect } from '@playwright/test'
+import { test, expect, Page } from '@playwright/test'
 
-// define the page on beforeAll which runs before all the tests
+// usually we would define the page with beforeAll which runs before all the tests
 // test.beforeAll(async ({ browser }) => {
 //   page = await browser.newPage()
 // })
+// let page: Page
+// But this doesn't work if a test requires switching tabs, so we create individual
+// page instances for each test
 
 test("Yahoo search results test", async ({ context }) => {
   // open a new page in the test
@@ -28,3 +31,17 @@ test("Yahoo search results test", async ({ context }) => {
   await page.bringToFront()
 })
 
+
+test("Northwestern Mutal, What is a Financial Advisor", async ({ browser }) => {
+  let page = await browser.newPage();
+  await page.goto("https://northwesternmutual.com")
+  // click Find a Financial Advisor button
+  await page.locator("xpath = //*[@id = 'nmx-nav-link-utility-fafa']").click()
+  // scroll to news articles
+
+  // click first article "What Is a Financial Advisor"
+  await page.locator("xpath = //*[text() = 'What Is a Financial Advisor?']").click()
+  // Capture the 3 Key Takeaways
+  let keyTakeaways = await page.locator("xpath = //*[@class = 'list list--checks']").textContent()
+  console.log(keyTakeaways)
+})
