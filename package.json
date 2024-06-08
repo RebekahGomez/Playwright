@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "googleTest": "npx playwright test src/test/Playwright_Day1_06042024/GoogleSearch.spec.ts --headed --workers=1 --project=chrome --project=safari --reporter=html",
-    "actionItem01": "npx playwright test src/test/ActionItems/AI01_06082024.spec.ts --headed --workers=2 --project=chrome --reporter=html"
+    "actionItem01": "npx playwright test src/test/ActionItems/AI01_06082024.spec.ts --headed --workers=2 --project=chrome --project=firefox --reporter=html"
   },
   "keywords": [],
   "author": "",

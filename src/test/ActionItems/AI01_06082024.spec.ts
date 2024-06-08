@@ -1,4 +1,4 @@
-import { test, expect, Page } from '@playwright/test'
+import { test, expect } from '@playwright/test'
 
 // usually we would define the page with beforeAll which runs before all the tests
 // test.beforeAll(async ({ browser }) => {
@@ -25,7 +25,8 @@ test("Yahoo search results test", async ({ context }) => {
     ]
   ) // end of promise function
   // get search results from new tab
-  let searchResult = await newPage.locator("xpath = //*[@class = 'fz-13 lh-n fc-reflightgray']").textContent()
+  // let searchResult = await newPage.locator("xpath = //*[@class = 'fz-13 lh-n fc-reflightgray']").textContent()
+  let searchResult = await newPage.locator("xpath = //*[@class = 'title mb-0']").nth(0).textContent()
   console.log(searchResult)
   // switch back to previous tab
   await page.bringToFront()
@@ -37,8 +38,6 @@ test("Northwestern Mutal, What is a Financial Advisor", async ({ browser }) => {
   await page.goto("https://northwesternmutual.com")
   // click Find a Financial Advisor button
   await page.locator("xpath = //*[@id = 'nmx-nav-link-utility-fafa']").click()
-  // scroll to news articles
-
   // click first article "What Is a Financial Advisor"
   await page.locator("xpath = //*[text() = 'What Is a Financial Advisor?']").click()
   // Capture the 3 Key Takeaways
