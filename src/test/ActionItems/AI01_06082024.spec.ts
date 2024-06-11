@@ -21,6 +21,8 @@ test("Yahoo search results test", async ({ context }) => {
         // waits for new tab to open (make sure you have a comma "," after each line - this is an array)
         context.waitForEvent('page'),
         // triggers the new tab to open by pressing "Enter"
+        // this next line is the action that triggers a new tab to open - either hitting enter or clicking 
+        // a certain button such as "search for ___"
         await page.keyboard.press("Enter")
     ]
   ) // end of promise function
