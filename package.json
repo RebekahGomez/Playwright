@@ -6,7 +6,10 @@
   "scripts": {
     "googleTest": "npx playwright test src/test/Playwright_Day1_06042024/GoogleSearch.spec.ts --headed --workers=1 --project=chrome --project=safari --reporter=html",
     "actionItem01": "npx playwright test src/test/ActionItems/AI01_06082024.spec.ts --headed --workers=2 --project=chrome --project=firefox --reporter=html",
-    "uspsTest": "npx playwright test src/test/Playwright_Day2_06102024/T1_MouseActions.spec.ts --headed --workers=1 --project=chrome --reporter=html"
+    "uspsTest": "npx playwright test src/test/Playwright_Day2_06102024/T1_MouseActions.spec.ts --headed --workers=1 --project=chrome --reporter=html",
+    "googleCarsTest": "npx playwright test src/test/Playwright_Day2_06102024/T2_GoogleSearch_Loop.spec.ts --headed --workers=1 --project=chrome --reporter=html",
+    "showReport":  "npx playwright show-report",
+    "runAllTests": "npx playwright test src/test/*.spec.ts --headed --workers=1 --project=chrome --reporter=html"
   },
   "keywords": [],
   "author": "",
