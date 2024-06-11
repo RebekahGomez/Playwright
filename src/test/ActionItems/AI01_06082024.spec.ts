@@ -24,6 +24,7 @@ test("Yahoo search results test", async ({ context }) => {
         // this next line is the action that triggers a new tab to open - either hitting enter or clicking 
         // a certain button such as "search for ___"
         await page.keyboard.press("Enter")
+        // and these two lines (22 and 26) are an array that will be stored in the "newPage" variable on line 18
     ]
   ) // end of promise function
   // get search results from new tab
