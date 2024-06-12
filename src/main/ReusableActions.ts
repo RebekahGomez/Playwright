@@ -24,3 +24,9 @@ export async function captureText(page:Page, xpath:string, elementName:string) {
   let result = await page.locator(xpath).textContent()
   return result
 }
+
+// press enter on a field
+export async function submit(page: Page) {
+  console.log("Pressing the Enter button")
+  await page.keyboard.press("Enter")
+}

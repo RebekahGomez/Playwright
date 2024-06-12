@@ -1,5 +1,5 @@
 import { test, expect, Page } from '@playwright/test'
-import { captureText, click, navigate, sendKeys } from '../../main/ReusableActions'
+import { captureText, click, navigate, sendKeys, submit } from '../../main/ReusableActions'
 
 let page: Page
 
@@ -15,7 +15,7 @@ test("Search for a keyword on Bing", async () => {
   // if the program is too fast, you may need to add an await and/or use the "Enter" command instead of
   // clicking on the "search" icon -- that's what we had to do here
   await page.waitForTimeout(1000)
-  await page.keyboard.press("Enter")
+  await submit(page)
   // click on search icon
   // await click(page, "//*[@id='search_icon']", "Search Icon")
 })
