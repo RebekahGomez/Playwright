@@ -12,14 +12,15 @@ export async function sendKeys(page:Page, xpath:string, userValue:string, elemen
   await page.locator(xpath).fill(userValue)
 }
 
-// click reusuable method
+// click reusable method
 export async function click(page:Page, xpath:string, elementName:string) {
   console.log("Clicking on " + elementName)
   await page.locator(xpath).click()
 }
 
-// capture text resuable method
+// capture text reusable method
 export async function captureText(page:Page, xpath:string, elementName:string) {
   console.log("Capturing the text from " + elementName)
-  await page.locator(xpath).textContent()
+  let result = await page.locator(xpath).textContent()
+  return result
 }
