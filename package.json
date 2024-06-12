@@ -9,7 +9,9 @@
     "uspsTest": "npx playwright test src/test/Playwright_Day2_06102024/T1_MouseActions.spec.ts --headed --workers=1 --project=chrome --reporter=html",
     "googleCarsTest": "npx playwright test src/test/Playwright_Day2_06102024/T2_GoogleSearch_Loop.spec.ts --headed --workers=1 --project=chrome --reporter=html",
     "showReport":  "npx playwright show-report",
-    "runAllTests": "npx playwright test src/test/*.spec.ts --headed --workers=1 --project=chrome --reporter=html"
+    "runAllTests": "npx playwright test src/test/*.spec.ts --headed --workers=1 --project=chrome --reporter=html",
+    "bingTest": "npx playwright test src/test/Playwright_Day3_06112024/T1_BingSearch_Reusable.spec.ts --headed --workers=1 --project=chrome --reporter=html"
+
   },
   "keywords": [],
   "author": "",
