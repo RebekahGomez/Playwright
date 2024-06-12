@@ -38,6 +38,12 @@ export async function hover(page: Page, xpath: string, elementName: string) {
   await page.locator(xpath).hover()
 }
 
+// hover by index reusable method
+export async function hoverByIndex(page:Page, xpath: string, elementName: string, index: number=0) {
+  console.log("Hovering over " + elementName + " at index " + index)
+  await page.locator(xpath).nth(index).hover()
+}
+
 // scroll by pixels reusable method
 export async function scrollPixels(page:Page, x:number, y:number) {
   console.log("Scrolling " + x + ", " + y + " pixels")

@@ -1,5 +1,5 @@
 import { test, expect, Page } from '@playwright/test'
-import { captureText, click, clickByIndex, hover, navigate, scrollPixels } from '../../main/ReusableActions'
+import { captureText, click, clickByIndex, hover, hoverByIndex, navigate, scrollPixels } from '../../main/ReusableActions'
 
 let page: Page
 
@@ -10,9 +10,9 @@ test.beforeAll(async ({ browser }) => {
 test("USPS stamps", async () => {
   await navigate(page, "https://www.usps.com/")
   // hover over Shop module
-  await page.locator("xpath=//*[text()='Shop']").nth(0).hover()
+  // await page.locator("xpath=//*[text()='Shop']").nth(0).hover()
   // await hover(page, "xpath=//*[text()='Shop']", "Hover over Shop")
-  await page.waitForTimeout(2000)
+  await hoverByIndex(page, "xpath=//*[text()='Shop']", "Hover over Shop", 0)
   // click on Stamps
   await click(page, "xpath=//*[text()='Stamps']", "Click on Stamps")
   // click on checkbox for stamps under Category section
@@ -27,5 +27,7 @@ test("USPS stamps", async () => {
   await click(page, "xpath=//*[text()='View Cart']", "View Cart")
   // capture the stamp information and print it
   let result = await captureText(page, "xpath=//*[@class='prod-item-title']", "Capture stamp information")
+  // trim and replace multiple spaces with a single space
+  result = result.replace(/\s+/g, ' ').trim()
   console.log("The stamp information is: " + result)
 })
