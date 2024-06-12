@@ -10,7 +10,8 @@ test.beforeAll(async ({ browser }) => {
 test("USPS stamps", async () => {
   await navigate(page, "https://www.usps.com/")
   // hover over Shop module
-  await hover(page, "xpath=//*[@id='navpostalstore']", "Hover over Shop")
+  await hover(page, "xpath=//*[@id='navpostalstore'", "Hover over Shop")
+  await page.waitForTimeout(2000)
   // click on Stamps
   await click(page, "xpath=//*[text()='Stamps']", "Click on Stamps")
   // click on checkbox for stamps under Category section
