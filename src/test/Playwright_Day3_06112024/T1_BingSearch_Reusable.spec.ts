@@ -12,8 +12,12 @@ test("Search for a keyword on Bing", async () => {
   await navigate(page, "https://www.bing.com/")
   // enter a keyword in the search field
   await sendKeys(page, "//*[@name='q']", "playwright", "Search Field")
+  // if the program is too fast, you may need to add an await and/or use the "Enter" command instead of
+  // clicking on the "search" icon -- that's what we had to do here
+  await page.waitForTimeout(1000)
+  await page.keyboard.press("Enter")
   // click on search icon
-  await click(page, "//*[@id='search_icon']", "Search Icon")
+  // await click(page, "//*[@id='search_icon']", "Search Icon")
 })
 
 test("Capture the search result", async () => {
