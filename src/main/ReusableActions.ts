@@ -2,7 +2,7 @@ import { Page } from '@playwright/test'
 import exp from 'constants'
 
 // navigating to any website reusable method
-export async function navigate(page: Page, url: string) {
+export async function navigate(page:Page, url:string) {
   console.log("Navigate to " + url)
   await page.goto(url)
 }
