@@ -4,11 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "allure:report": "allure generate allure-results --clean -o allure-report",
+    "allure:clear": "rm -rf allure-results && rm -rf allure-report && rm -rf test-results",
+    "pretest": "npm run allure:clear",
+    "posttest": "npm run allure:report",
+    "showAllureReport": "npx allure serve allure-results",
+    "showHTMLReport":  "npx playwright show-report",
     "googleTest": "npx playwright test src/test/Playwright_Day1_06042024/GoogleSearch.spec.ts --headed --workers=1 --project=chrome --project=safari --reporter=html",
     "actionItem01": "npx playwright test src/test/ActionItems/AI01_06082024.spec.ts --headed --workers=2 --project=chrome --project=firefox --reporter=html",
     "uspsTest": "npx playwright test src/test/Playwright_Day2_06102024/T1_MouseActions.spec.ts --headed --workers=1 --project=chrome --reporter=html",
     "googleCarsTest": "npx playwright test src/test/Playwright_Day2_06102024/T2_GoogleSearch_Loop.spec.ts --headed --workers=1 --project=chrome --reporter=html",
-    "showReport":  "npx playwright show-report",
     "runAllTests": "npx playwright test src/test/*.spec.ts --headed --workers=1 --project=chrome --reporter=html",
     "bingTest": "npx playwright test src/test/Playwright_Day3_06112024/T1_BingSearch_Reusable.spec.ts --headed --workers=1 --project=chrome --reporter=html",
     "actionItem02": "npx playwright test src/test/ActionItems/AI02_06152024.spec.ts --headed --workers=1 --project=chrome --reporter=html"
