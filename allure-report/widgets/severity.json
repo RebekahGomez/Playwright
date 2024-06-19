@@ -1,0 +1,1 @@
+[{"uid":"5c10f533d1323df6","name":"Search for BMW","time":{"start":1718759397461,"stop":1718759399869,"duration":2408},"status":"passed","severity":"normal"},{"uid":"cce73f8004b86a9c","name":"Capture the search result","time":{"start":1718759399871,"stop":1718759400777,"duration":906},"status":"passed","severity":"normal"}]

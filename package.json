@@ -9,22 +9,22 @@
     "pretest": "npm run allure:clear",
     "posttest": "npm run allure:report",
     "showAllureReport": "npx allure serve allure-results",
-    "showHTMLReport":  "npx playwright show-report",
-    "googleTest": "npx playwright test src/test/Playwright_Day1_06042024/GoogleSearch.spec.ts --headed --workers=1 --project=chrome --project=safari --reporter=html",
+    "showHTMLReport": "npx playwright show-report",
+    "googleTest": "npx playwright test src/test/Playwright_Day1_06042024/GoogleSearch.spec.ts --headed --workers=1 --project=chrome --reporter=line,allure-playwright",
     "actionItem01": "npx playwright test src/test/ActionItems/AI01_06082024.spec.ts --headed --workers=2 --project=chrome --project=firefox --reporter=html",
     "uspsTest": "npx playwright test src/test/Playwright_Day2_06102024/T1_MouseActions.spec.ts --headed --workers=1 --project=chrome --reporter=html",
     "googleCarsTest": "npx playwright test src/test/Playwright_Day2_06102024/T2_GoogleSearch_Loop.spec.ts --headed --workers=1 --project=chrome --reporter=html",
     "runAllTests": "npx playwright test src/test/*.spec.ts --headed --workers=1 --project=chrome --reporter=html",
     "bingTest": "npx playwright test src/test/Playwright_Day3_06112024/T1_BingSearch_Reusable.spec.ts --headed --workers=1 --project=chrome --reporter=html",
     "actionItem02": "npx playwright test src/test/ActionItems/AI02_06152024.spec.ts --headed --workers=1 --project=chrome --reporter=html"
-
-
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.44.1",
-    "@types/node": "^20.14.0"
+    "@types/node": "^20.14.0",
+    "allure-commandline": "^2.29.0",
+    "allure-playwright": "^3.0.0-beta.3"
   }
 }
