@@ -22,13 +22,18 @@ export async function click(page:Page, xpath:string, elementName:string) {
   await page.locator(xpath).click()
 }
 
+
+
 // capture text reusable method
-export async function captureText(page:Page, xpath:string, elementName:string) {
-  console.log("Capturing the text from " + elementName)
-  await allure.step("Capturing the test from " + elementName, async () => {
-    let result = await page.locator(xpath).textContent()
-    return result
-  })
+export async function captureText(page: Page, xpath: string, elementName: string) {
+  console.log("Capturing the text from " + elementName);
+  let result: string | null = null;
+
+  await allure.step("Capturing the text from " + elementName, async () => {
+    result = await page.locator(xpath).textContent();
+  });
+
+  return result;
 }
 
 // press enter on a field
