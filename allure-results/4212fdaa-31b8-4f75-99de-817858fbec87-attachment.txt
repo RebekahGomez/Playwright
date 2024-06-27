@@ -1,0 +1,5 @@
+Navigate to https://www.northwesternmutual.com
+Hovering over Hover over Insurance at index 2
+Clicking on Click Life Insurance Calculator
+Clicking on Calculate button
+Clicking on Click Dropdown for Dependents

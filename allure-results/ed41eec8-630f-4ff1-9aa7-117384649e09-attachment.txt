@@ -1,0 +1,12 @@
+Navigate to https://www.northwesternmutual.com
+Hovering over Hover over Insurance at index 2
+Clicking on Click Life Insurance Calculator
+Clicking on Calculate button
+Clicking on Click Dropdown for Dependents
+Clicking on Select Just Me
+Entering a keyword on Enter Zip Code
+Clicking on Dropdown for gender
+Clicking on Select female
+Entering a keyword on Enter age
+Entering a keyword on Enter income
+Clicking on Dropdown for Monthly Expenses

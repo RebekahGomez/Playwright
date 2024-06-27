@@ -16,7 +16,8 @@
     "googleCarsTest": "npx playwright test src/test/Playwright_Day2_06102024/T2_GoogleSearch_Loop.spec.ts --headed --workers=1 --project=chrome --reporter=html",
     "runAllTests": "npx playwright test src/test/*.spec.ts --headed --workers=1 --project=chrome --reporter=html",
     "bingTest": "npx playwright test src/test/Playwright_Day3_06112024/T1_BingSearch_Reusable.spec.ts --headed --workers=1 --project=chrome --reporter=html",
-    "actionItem02": "npx playwright test src/test/ActionItems/AI02_06152024.spec.ts --headed --workers=1 --project=chrome --reporter=html"
+    "actionItem02": "npx playwright test src/test/ActionItems/AI02_06152024.spec.ts --headed --workers=1 --project=chrome --reporter=html",
+    "NWMLifeInsuranceCalc": "npx playwright test src/test/NorthwesternMutual/LifeInsuranceCalculator.spec.ts --headed --workers=1 --project=chrome --reporter=html"
   },
   "keywords": [],
   "author": "",
